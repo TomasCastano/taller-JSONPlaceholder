@@ -18,7 +18,7 @@
     <main>
         <header>
             <h1 id="headerTitle">Tabla de Usuarios</h1>
-            <h3>Listado y creación de usuarios</h3>
+            <h3>Listado, creación, edición y eliminación de usuarios</h3>
         </header>
         
         <section class="post-section">
@@ -53,6 +53,49 @@
                             <p class="card-text" id="postCardBody">Descripción o cuerpo del post.</p>
                         </div>
                         <div class="card-footer text-body-secondary" id="postCardUserId">
+                            Usuario
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="edit-section">
+            <h3>Edición de un usuario</h3>
+            <div class="edition-container">
+                <form onsubmit="editPost(event)">
+                    <fieldset>
+                        <div class="sender-info">
+                            <div class="inputGroup">
+                                <input type="number" required="" autocomplete="off" id="postIdEdit">
+                                <label for="postIdEdit">ID del Post</label>
+                            </div>
+                            <div class="inputGroup">
+                                <input type="text" required="" autocomplete="off" id="titleEdit">
+                                <label for="name">Título</label>
+                            </div>
+                            <div class="inputGroup">
+                                <input type="text" required="" autocomplete="off" id="bodyEdit">
+                                <label for="name">Descripción</label>
+                            </div>
+                            <div class="inputGroup">
+                                <input type="number" required="" autocomplete="off" id="userIdEdit">
+                                <label for="name">Usuario</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Enviar">
+                </form>
+                <div class="card-container">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            Post Editado
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title" id="editCardTitle">Título del Post</h5>
+                            <p class="card-text" id="editCardBody">Descripción o cuerpo del post.</p>
+                        </div>
+                        <div class="card-footer text-body-secondary" id="editCardUserId">
                             Usuario
                         </div>
                     </div>
